@@ -3,11 +3,6 @@ package net.lockney
 import akka.actor.{Props, ActorLogging, Actor, ActorSystem}
 import akka.cluster.Cluster
 import akka.cluster.ClusterEvent._
-import akka.cluster.ClusterEvent.MemberUp
-import akka.cluster.ClusterEvent.UnreachableMember
-import akka.cluster.ClusterEvent.CurrentClusterState
-import akka.cluster.ClusterEvent.MemberRemoved
-import com.typesafe.config.ConfigFactory
 
 class ClusterMonitor extends Actor with ActorLogging {
   def receive = {
